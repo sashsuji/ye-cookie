@@ -1,0 +1,35 @@
+html {
+    font-size: 14px;
+    color: white;
+    background: url(ye.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    color:goldenrod;
+    text-shadow: 2px 2px black;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    font-size:3rem;
+}
+
+body{
+    text-align: center;
+}
+
+#options{
+    font-size: 2rem;
+}

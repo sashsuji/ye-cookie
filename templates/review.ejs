@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="style2.css" />
+	<title>Review Fortune Cookie</title>
+</head>
+
+<body>
+	<h1>Review your Ye fortune cookie by entering your email below.</h1>
+
+    <form action=<%- port %> method="POST">
+        <fieldset>
+            <label><strong>Email Address: </strong></label>
+            <input type="email" name="email"><br>
+        </fieldset>
+        <br>
+        <input type="reset">
+        <input type="submit" value="Submit Application">
+    </form>
+    <br>
+
+    <hr>
+    <a href="/">HOME</a>
+
+</body>
+
+</html>

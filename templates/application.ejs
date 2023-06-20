@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="style2.css" />
+	<title>Application</title>
+</head>
+
+<body>
+	<h1>Fill out the information below to get your personalized Ye fortune cookie!</h1>
+
+    <form action=<%- port %> method="POST">
+        <div id = "everything">
+            <label><strong>Name: </strong></label>
+            <input type="text" name="name"><br>
+            <label><strong>Email Address: </strong></label>
+            <input type="email" name="email"><br><br>
+        </div>
+     <!--           
+            <label><strong>GPA: </strong></label>
+            <input type="number" name="GPA" step="0.01"><br><br>
+            <label><strong>Background Information: </strong></label><br>
+            <textarea name="background" rows="10" cols="80"></textarea>-->
+        <br>
+
+        <script>
+            let url = "https://api.kanye.rest";
+
+            fetch(url)
+                .then(response => response.json())
+                .then(json => {
+                    /*var tag = document.createElement("p");
+                    var text = document.createTextNode(JSON.stringify(json.quote));
+                    tag.appendChild(text);
+                    var element = document.getElementById("everything");
+                    element.appendChild(tag);
+                    */
+                    
+                    let inp = `<input type="text" name="quote" value=${JSON.stringify(json.quote)} hidden>`;
+                    console.log(JSON.stringify(json.quote));
+
+                    document.getElementById("everything").innerHTML += inp;
+                });
+        </script>
+          
+          <!--  function myFunction(){
+                 // json is an object with the data
+            }
+
+            function processObject(json) {
+                console.log("Data Retrieved\n");
+                console.log(json);
+                console.log("Accessing properties\n")
+                console.log(`quote: ${json.quote}`);
+                document.getElementById("quote").value = json.quote;
+            }*/-->
+            
+
+        
+         <!--       <script>
+            window.onsubmit = () => { return window.confirm("Are you sure you want to submit your applications?\nYou will not be able to change your information once submitted."); };
+        </script>-->
+
+        <input type="reset">
+        <input type="submit" value="Submit Application">
+    </form>
+    <br>
+
+    <hr>
+    <a href="/">HOME</a>
+
+
+</body>
+
+</html>
